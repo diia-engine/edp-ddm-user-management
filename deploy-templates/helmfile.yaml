@@ -94,8 +94,8 @@ releases:
   - values.gotmpl
   - image:
       name: '{{ env "edpComponentDockerRegistryUrl" }}/{{ env "globalEDPProject" }}/keycloak-master'
-      version: 1.9.6.18
-  version: 1.9.6.18
+      version: 1.9.6.23
+  version: 1.9.6.23
   hooks:
   - events:
     - presync
@@ -181,8 +181,8 @@ releases:
   - values.gotmpl
   - image:
       name: '{{ env "edpComponentDockerRegistryUrl" }}/{{ env "globalEDPProject" }}/digital-signature-ops-master'
-      version: 1.9.5.11
-  version: 1.9.5.11
+      version: 1.9.7.4
+  version: 1.9.7.4
   missingFileHandler: Warn
   labels:
     type: remote
@@ -199,7 +199,7 @@ releases:
   - values.yaml
   - values.gotmpl
   missingFileHandler: Warn
-  version: 1.5.0-SNAPSHOT.71
+  version: 1.5.0-SNAPSHOT.79
   labels:
     type: remote
     update_scc: false
@@ -215,8 +215,7 @@ releases:
     update_scc: false
     repoURL: ssh://jenkins@gerrit.mdtu-ddm-edp-cicd:32114/mdtu-ddm/devops/reloader.git
     path: components/registry/
-    branch: 1.9.6-SNAPSHOT.1
-  version: 1.9.6-SNAPSHOT.1
+  version: 1.9.6-SNAPSHOT.2
   values:
   - values.yaml
   - values.gotmpl
@@ -230,6 +229,7 @@ releases:
   namespace: user-management
   chart: keycloak-nginx-proxy
   missingFileHandler: Warn
+  installed: false
   needs:
   - user-management/keycloak
   values:
